@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "PC",
+      "price": "7800",
+      "quantity": "500",
+      "selected": false,
+      "available": true
+    },
+    {
+      "id": 3,
+      "name": "Graphic Card",
+      "price": 1200,
+      "quantity": "100",
+      "selected": true,
+      "available": false
+    },
+    {
+      "name": "Headphones",
+      "price": "99",
+      "quantity": "5",
+      "selected": true,
+      "available": true,
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "yzqsdsd",
+      "price": "1231",
+      "quantity": "12",
+      "selected": true,
+      "available": true
+    }
+  ]
+}
