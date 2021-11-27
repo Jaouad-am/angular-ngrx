@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Product } from '../model/product/product.model';
+import { Product } from '../model/product.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class ProductsService {
   constructor(private http: HttpClient) { }
 
   getProducts(): Observable<Product[]> {
-    let host = Math.random()>0.2?environment.host:environment.unreachable;
+    let host = Math.random() > 0.2 ? environment.host : environment.unreachable;
     return this.http.get<Product[]>(`${host}/products`);
   }
 
