@@ -8,6 +8,8 @@ import { ProductsNavbarComponent } from './components/products/products-navbar/p
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
+import { productsReducer } from './ngrx/products.reducer';
+import { ProductsEffects } from './ngrx/products.effects';
 
 
 @NgModule({
@@ -20,8 +22,8 @@ import { EffectsModule } from '@ngrx/effects';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    StoreModule.forRoot({}),
-    EffectsModule.forRoot([]),
+    StoreModule.forRoot({ productsState: productsReducer }),
+    EffectsModule.forRoot([ProductsEffects]),
     StoreDevtoolsModule.instrument()
   ],
   providers: [],

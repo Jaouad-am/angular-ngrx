@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { GetAllProductsAction } from 'src/app/ngrx/products.actions';
 
 @Component({
   selector: 'app-products-navbar',
@@ -7,12 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsNavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store<any>) { }
 
   ngOnInit(): void {
   }
 
-  getAllProducts() { }
+  getAllProducts() {
+    this.store.dispatch(new GetAllProductsAction({}))
+  }
   getSelectedProducts() { }
 
 }
