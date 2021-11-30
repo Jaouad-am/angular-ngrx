@@ -17,7 +17,7 @@ export class ProductsEffects {
                 return this.productsService.getProducts()
                     .pipe(
                         map((products) => new GetAllProductsActionSuccess(products)),
-                        catchError((err) => of(new GetAllProductsActionError(err)))
+                        catchError((err) => of(new GetAllProductsActionError(err.message)))
                     )
             })
         )
@@ -30,7 +30,7 @@ export class ProductsEffects {
                 return this.productsService.getSelectedProducts()
                     .pipe(
                         map((products) => new GetSelectedProductsActionSuccess(products)),
-                        catchError((err) => of(new GetSelectedProductsActionError(err)))
+                        catchError((err) => of(new GetSelectedProductsActionError(err.message)))
                     )
             })
         )

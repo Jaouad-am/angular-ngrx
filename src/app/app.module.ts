@@ -10,6 +10,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { productsReducer } from './ngrx/products.reducer';
 import { ProductsEffects } from './ngrx/products.effects';
+import { ProductsListComponent } from './components/products/products-list/products-list.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ProductsEffects } from './ngrx/products.effects';
     AppComponent,
     ProductsComponent,
     ProductsNavbarComponent,
+    ProductsListComponent,
   ],
   imports: [
     BrowserModule,
