@@ -11,6 +11,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { productsReducer } from './ngrx/products.reducer';
 import { ProductsEffects } from './ngrx/products.effects';
 import { ProductsListComponent } from './components/products/products-list/products-list.component';
+import { ProductItemComponent } from './components/products/products-list/product-item/product-item.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { ProductsListComponent } from './components/products/products-list/produ
     ProductsComponent,
     ProductsNavbarComponent,
     ProductsListComponent,
+    ProductItemComponent,
   ],
   imports: [
     BrowserModule,

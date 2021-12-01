@@ -6,11 +6,6 @@
         <th>Selected</th>
         <th>Available</th>
     </tr>
-    <tr *ngFor="let product of state.products">
-        <td>{{product.id}}</td>
-        <td>{{product.price}}</td>
-        <td>{{product.quantity}}</td>
-        <td>{{product.selected}}</td>
-        <td>{{product.available}}</td>
-    </tr>
+    <app-product-item *ngFor="let product of state.products" [product]="product" style="display:contents">
+    </app-product-item>
 </table>
